@@ -13,7 +13,7 @@ int main()
           "96983520312774506326239578318016984801869478851843"
           "85861560789112949495459501737958331952853208805511"
           "12540698747158523863050715693290963295227443043557"
-          "66896648950445244523161731856403098711121722383113"    
+          "66896648950445244523161731856403098711121722383113"
           "62229893423380308135336276614282806444486645238749"
           "30358907296290491560440772390713810515859307960866"
           "70172427121883998797908792274921901699720888093776"
@@ -30,34 +30,44 @@ int main()
           "05886116467109405077541002256983155200055935729725"
           "71636269561882670428252483600823257530420752963450";
 
-      long long prod = 1 ; 
+      long long prod = 1;
       long long maxi = 0LL;
-      int countzero = 0 ; 
+      int countzero = 0;
 
-      int n; cin >> n;
+      int n;
+      cin >> n;
 
-      int i = 0 , j = 0;
-      while(j < (int)s.length()){
-            if(j - i < n){
-                  if(s[j] != '0') prod *= (s[j] - '0');
-                  else countzero++;
+      int i = 0, j = 0;
+      while (j < (int)s.length())
+      {
+            if (j - i < n)
+            {
+                  if (s[j] != '0')
+                        prod *= (s[j] - '0');
+                  else
+                        countzero++;
                   j++;
             }
-            else{
-                  if(countzero == 0) maxi = max(maxi , prod);
-                  if(s[i] != '0') prod /= (s[i] - '0');
-                  else countzero --;
+            else
+            {
+                  if (countzero == 0)
+                        maxi = max(maxi, prod);
+                  if (s[i] != '0')
+                        prod /= (s[i] - '0');
+                  else
+                        countzero--;
                   i++;
 
-                  if(s[j] != '0') prod *= (s[j] - '0');
-                  else countzero ++;
+                  if (s[j] != '0')
+                        prod *= (s[j] - '0');
+                  else
+                        countzero++;
                   j++;
             }
-            cout<<prod<<endl;
+            cout << prod << endl;
       }
 
-      cout<<"maxi -> "<<maxi<<endl;
-      
+      cout << "maxi -> " << maxi << endl;
 
       return 0;
 }

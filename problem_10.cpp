@@ -44,7 +44,3 @@ int main()
 
       return 0;
 }
-
-// Your code here , add
-
-// Output the elapsed time

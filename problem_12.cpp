@@ -21,10 +21,6 @@ inline int count_divisors(long long n){
 }
 
 int main(){
-      ios::sync_with_stdio(0);
-      cin.tie(0);
-      cout.tie(0);
-
       int i = 1;
       while(count_divisors(get_triangle_number(i)) < 500){
             i++;

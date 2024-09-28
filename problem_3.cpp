@@ -68,6 +68,12 @@
 
 
 // optimized method : 
+// see if you keep dividing by 2 then all factors of 2 are removed , 
+// then same with 3 
+// now 4 can't divide num , since all factors of 2 are removed 
+// 5 - maybe 5 can divide ... 
+
+// over all , it's a slight variation of sieve of eratosthenis.. 
 #include <bits/stdc++.h>
 using namespace std;
 
